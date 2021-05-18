@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "lint": "eslint ."
   },
   "author": "",
@@ -16,8 +16,11 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http": "0.0.1-security",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
     "path": "^0.12.7",
     "plivo": "^4.17.1",
+    "sequelize": "^6.6.2",
     "ws": "^7.4.5"
   }
 }

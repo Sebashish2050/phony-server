@@ -24,19 +24,14 @@ app.use(express.static('public'));
 
 app.use(routeBase, router());
 
-// const serverSetup = () =>
-//   app.listen(port, err => {
-//     if (err) console.error(err);
-//     console.log(`Ready on port ${port}`);
-//   });
-
-// module.exports = serverSetup;
-
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
 socket.intializeWebSocket(wss);
 
-server.listen(port, err => {
-  if (err) console.error(err);
-  console.log(`Ready on port ${port}`);
-});
+const serverSetup = () =>
+  server.listen(port, err => {
+    if (err) console.error(err);
+    console.log(`Ready on port ${port}`);
+  });
+
+module.exports = serverSetup;

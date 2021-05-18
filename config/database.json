@@ -1,9 +1,0 @@
-{
-  "development": {
-    "username": "narvar",
-    "password": "narvar",
-    "database": "tracking",
-    "host": "localhost",
-    "dialect": "postgres"
-  }
-}
