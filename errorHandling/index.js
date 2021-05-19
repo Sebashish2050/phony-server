@@ -1,13 +1,11 @@
 const wrapAsync = fn => (req, res, next) => fn(req, res, next).catch(next);
 
-const wrapAsyncRouteHandlers = routeHandlers =>
-  Object.assign(
-    ...Object.entries(routeHandlers).map(([k, v]) => ({ [k]: wrapAsync(v) }))
-  );
-
 const handleErrors = (err, req, res) => {
   if (err) {
-    console.error(err);
+    console.error(err); 
+
+
+    
     if (typeof err === 'string') {
       return res.status(500).send({
         errors: [err],
@@ -32,5 +30,4 @@ const handleErrors = (err, req, res) => {
 module.exports = {
   handleErrors,
   wrapAsync,
-  wrapAsyncRouteHandlers,
 };

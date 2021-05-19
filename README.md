@@ -1,6 +1,6 @@
 # phony-server
 ## How to run
-Please follow below steps to run this server locally...
+Please follow below steps to run this server locally
 ## Install Homebrew if not present
 To check homebrew is present, trpe `brew` in command line and press enter.
 ### On macOS:
