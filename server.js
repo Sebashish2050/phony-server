@@ -4,6 +4,7 @@ const http = require('http');
 const WebSocket = require('ws');
 const config = require('config');
 const cors = require('cors');
+const path = require('path');
 
 const router = require('./router');
 const socket = require('./socket');
@@ -20,7 +21,7 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routeBase, router());
 
