@@ -15,7 +15,7 @@ const client = new plivo.Client(
 const selfHost = config.get('self_host');
 
 const makeCall = (req, res) => {
-  const { callerName, callerNumber, calleeName, calleeNumber } = req.body;
+  const { callerName, callerNumber, calleeName, calleeNumber, timeLimit = 5 } = req.body;
   if(!callerName || !callerNumber || !calleeName || !calleeNumber) {
     return res.status(400).json({msg: 'bad request'});
   }
@@ -27,7 +27,7 @@ const makeCall = (req, res) => {
       `${selfHost}/api/v1/answer`, // answer url
       {
         answerMethod: "POST",
-        timeLimit: 10,
+        timeLimit,
       }
     )
     .then(
