@@ -2,7 +2,6 @@ const dbUtils = require('../sequelize');
 const { sequelizeWrapper } = require('../sequelize/wrapper');
 const { CLOUDPHONY } = require('../constants');
 
-// To save the costs
 const upsertCallerInfo = async ({ callerNumber, callerName }) => {
   const callerInfo = await dbUtils
     .getPool(CLOUDPHONY)

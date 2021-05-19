@@ -14,4 +14,5 @@ module.exports = {
     databaseName: 'cloudphony',
   },
   port: 8080,
+  self_host: 'https://08f3e9004315.ngrok.io',
 };

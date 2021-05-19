@@ -10,12 +10,11 @@ const intializeWebSocket = (wss) => {
   });
 };
 
-const sendMessage = (startTime, callStatus, endTime ) => {
+const sendMessage = (startTime, callStatus, endTime, duration ) => {
   if(wsCon) {
-    console.log('inside send message:: ', message);
     var msg = {
       type: "event",
-      details: {startTime, callStatus, endTime},
+      details: {startTime, callStatus, endTime, duration},
     };
     wsCon.send(JSON.stringify(msg));
   }
