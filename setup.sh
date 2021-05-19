@@ -1,7 +1,4 @@
 #!bin/bash
-echo "Installing brew. Install brew manually if this fails. If installed manually, then please comment out below line and run this script again"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 echo "Installing dependencies..."
 brew install git git-lfs node mysql
 
@@ -28,5 +25,3 @@ mysql -u root --password=Mysql@123 -e 'DROP DATABASE cloudphony'
 # recreate the tracking database
 echo "Create the tracking database..."
 mysql -u root --password=Mysql@123 -e 'CREATE DATABASE cloudphony'
-
-echo "If any steps failed please try to run manually..."

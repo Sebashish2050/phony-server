@@ -2,7 +2,6 @@ let wsCon = null;
 const intializeWebSocket = (wss) => {
   wss.on('connection', (ws) => {
     wsCon = ws;
-    //send immediatly a feedback to the incoming connection    
     var msg = {
       type: "message",
       details: {callStatus: 'Hi there, socket server is up'},
