@@ -1,16 +1,13 @@
-#!bin/bash
+#!/bin/bash
 echo "Installing dependencies..."
-brew install git git-lfs node mysql
-
-echo "Installing git lfs..."
-git lfs install
+brew install node mysql
 
 echo "Installing nodemon..."
 npm i -g nodemon
 
 echo "Running mysql"
 brew services start mysql
-echo "*** You will be prompted for a password, please use `Mysql@123` as password by selecting 2 as strong password ***"
+echo "*** You will be prompted for a password, please use 'Mysql@123' as password by selecting 2 as strong password ***"
 echo "*** Press `Y` for all other options ***"
 mysql_secure_installation
 echo "Stopping mysql"
