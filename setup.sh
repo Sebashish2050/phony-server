@@ -22,3 +22,10 @@ mysql -u root --password=Mysql@123 -e 'DROP DATABASE cloudphony'
 # recreate the tracking database
 echo "Create the tracking database..."
 mysql -u root --password=Mysql@123 -e 'CREATE DATABASE cloudphony'
+
+echo "***********For Ubuntu*********"
+echo "Log into mysql: mysql -u root -p"
+echo "run below commands:"
+echo "CREATE USER '<new_username>'@'%' IDENTIFIED BY '<your_password>';"
+echo "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, PROCESS, REFERENCES, INDEX, ALTER, SHOW DATABASES, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER ON *.* TO '<new_username>'@'%' WITH GRANT OPTION;"
+
